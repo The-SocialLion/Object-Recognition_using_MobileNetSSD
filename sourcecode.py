@@ -43,10 +43,11 @@ while True:
                 P = startY-15
             else:
                 P=startY+15
-                cv2.putText(frame,label,(startX, P),cv2.FONT_HERSHEY_SIMPLEX, 0.5,COLORS[idx],2)
+            cv2.putText(frame,label,(startX, P),cv2.FONT_HERSHEY_SIMPLEX, 0.5,COLORS[idx],2)
     cv2.imshow("frame",frame)
     key=cv2.waitKey(1)
     if key == 27:
         break
 vs.release()
 cv2.destroyAllWindows()
+
