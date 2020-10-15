@@ -40,10 +40,10 @@ while True:
             cv2.rectangle(frame,(startX, startY), (endX, endY),COLORS[idx],2)
             #used for plotting text above the boundary box
             if startY - 15 > 15:
-                y = startY-15
+                P = startY-15
             else:
-                startY+15
-            cv2.putText(frame,label,(startX, y),cv2.FONT_HERSHEY_SIMPLEX, 0.5,COLORS[idx],2)
+                P=startY+15
+                cv2.putText(frame,label,(startX, P),cv2.FONT_HERSHEY_SIMPLEX, 0.5,COLORS[idx],2)
     cv2.imshow("frame",frame)
     key=cv2.waitKey(1)
     if key == 27:
